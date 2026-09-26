@@ -307,7 +307,7 @@ pair<int,int> closest_pair_of_points(vector<pt> P) {
 		auto coord = it.first;
 		for (int dx = 0; dx <= 1; ++dx) {
 			for (int dy = -1; dy <= 1; ++dy) {
-				if (dx == 0 and dy == 0) continue;
+				if (dx == 0 and dy <= 0) continue;
 				pt neighbour = pt(
 					coord.x  + dx, 
 					coord.y + dy
